@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 });
 
 // render page after form has been submited
-app.post('/calc', (req, res) =>{
+app.post('/', (req, res) =>{
     let url= 'https://api.coindesk.com/v1/bpi/currentprice/eur.json';
     let currency = req.body.currency;
     let _ammount = parseInt(req.body.ammount);
