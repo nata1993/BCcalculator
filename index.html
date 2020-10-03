@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTC calculator!</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        h1{
+            margin-bottom: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>BTC Calculator</h1>
+    <h2>Enter your BTC ammount in full coins</h2>
+    <form action="/calc" method="POST">
+        <input name="ammount" type="number" min="0">
+        to
+        <select name="currency">
+            <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
+        </select><br>
+        <input type="submit" value="Calculate!">
+    </form>
+</body>
+</html>
