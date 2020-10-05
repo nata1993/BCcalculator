@@ -10,8 +10,8 @@ app.use(express.urlencoded({ extended: true }));    // for parsing application/x
 
 // start server on specified port
 const port = 3000;
-app.listen(port, () => {
-    console.log("server is running on port: " + port);
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Server has started.");
 });
 
 // render initial page
