@@ -8,11 +8,7 @@ app.use(express.static("public"));  // public folder for files to transmit over 
 app.set('view engine', ejs);
 app.use(express.urlencoded({ extended: true }));    // for parsing application/x-www-form-urlencoded
 
-// start server on specified port
-const port = 3000;
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Server has started.");
-});
+
 
 // render initial page
 app.get('/', (req, res) => {
@@ -57,4 +53,10 @@ app.post('/', (req, res) =>{
     .catch(function(error){
         console.log(error)
     });
+});
+
+// start server on specified port
+const port = 3000;
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Server has started.");
 });
